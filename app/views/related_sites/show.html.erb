@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @related_site.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @related_site.description %>
+</p>
+
+<%= link_to 'Edit', edit_related_site_path(@related_site) %> |
+<%= link_to 'Back', related_sites_path %>

@@ -1,0 +1,2 @@
+module FontTypesHelper
+end

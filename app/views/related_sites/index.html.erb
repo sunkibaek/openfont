@@ -1,0 +1,29 @@
+<h1>Listing related_sites</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @related_sites.each do |related_site| %>
+      <tr>
+        <td><%= related_site.name %></td>
+        <td><%= related_site.description %></td>
+        <td><%= link_to 'Show', related_site %></td>
+        <td><%= link_to 'Edit', edit_related_site_path(related_site) %></td>
+        <td><%= link_to 'Destroy', related_site, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Related site', new_related_site_path %>

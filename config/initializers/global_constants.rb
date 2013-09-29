@@ -1,0 +1,1 @@
+STYLES = [[0, 'normal'], [1, 'italic'], [2, 'oblique']]

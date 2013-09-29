@@ -1,0 +1,12 @@
+@font-face {
+  font-family: '<%= font.family_name %>';
+  font-style: <%= font.style %>;
+  font-weight: <%= font.weight %>;
+  src: url('http://openfont.kr/fonts/<%= font.name %>.eot');
+  src: local('☺'),
+       url('http://openfont.kr/fonts/<%= font.name %>.eot?#iefix') format('embedded-opentype'),
+       url('http://openfont.kr/fonts/<%= font.name %>.woff2') format('woff2'),
+       url('http://openfont.kr/fonts/<%= font.name %>.woff') format('woff'),
+       url('http://openfont.kr/fonts/<%= font.name %>.svg#<%= font.family_name.gsub(' ', '') %>') format('svg'),
+       url('http://openfont.kr/fonts/<%= font.name %>.ttf') format('truetype');
+}

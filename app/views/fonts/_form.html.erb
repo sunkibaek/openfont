@@ -1,0 +1,82 @@
+<%= form_for(@font, html: { class: "form-horizontal" }) do |f| %>
+  <% if @font.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@font.errors.count, "error") %> prohibited this font from being saved:</h2>
+
+      <ul>
+      <% @font.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name, class: "col-lg-2 form-label" %>
+    <div class="col-lg-10">
+      <%= f.text_field :name, class: "form-control", autofocus: "autofocus" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :family_name, class: "col-lg-2 form-label" %>
+    <div class="col-lg-10">
+      <%= f.text_field :family_name, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :style, class: "col-lg-2 form-label" %>
+    <div class="col-lg-10">
+      <%= f.text_field :style, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :weight, class: "col-lg-2 form-label" %>
+    <div class="col-lg-10">
+      <%= f.text_field :weight, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.label :eot, class: "checkbox-inline" do %>
+        <%= f.check_box :eot %> eot
+      <% end %>
+      <%= f.label :woff, class: "checkbox-inline" do %>
+        <%= f.check_box :woff %> woff
+      <% end %>
+      <%= f.label :woff2, class: "checkbox-inline" do %>
+        <%= f.check_box :woff2 %> woff2
+      <% end %>
+      <%= f.label :ttf, class: "checkbox-inline" do %>
+        <%= f.check_box :ttf %> ttf
+      <% end %>
+      <%= f.label :svg, class: "checkbox-inline" do %>
+        <%= f.check_box :svg %> svg
+      <% end %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :font_type_id, class: "col-lg-2 form-label" %>
+    <div class="col-lg-10">
+      <%= f.collection_select :font_type_id, FontType.all, :id, :name, {}, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :copyright, class: "col-lg-2 form-label" %>
+    <div class="col-lg-10">
+      <%= f.text_area :copyright, class: "form-control", rows: 3 %>
+    </div>
+  </div>
+
+  <hr />
+
+  <%= f.submit 'Save', class: "btn btn-primary" %>
+  <%= link_to 'Back', admin_fonts_path, class: "btn btn-default" %>
+  <%= link_to 'Destroy', @font, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger pull-right" %>
+
+<% end %>

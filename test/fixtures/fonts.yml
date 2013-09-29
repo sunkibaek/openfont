@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  family_name: MyString
+  eot: false
+  woff: false
+  ttf: false
+  svg: false
+  font_type_id: 
+
+two:
+  name: MyString
+  family_name: MyString
+  eot: false
+  woff: false
+  ttf: false
+  svg: false
+  font_type_id: 

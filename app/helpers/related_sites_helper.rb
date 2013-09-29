@@ -1,0 +1,2 @@
+module RelatedSitesHelper
+end

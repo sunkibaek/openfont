@@ -1,0 +1,17 @@
+<h4>@font-face 코드</h4>
+<pre>
+<%= render 'css_code', font: @font %>
+</pre>
+
+<h4>사용예시</h4>
+<pre>
+p {
+  font-family: "<%= @font.family_name %>", <%= @font.font_type.name %>;
+}
+</pre>
+
+<div class="alert alert-info">
+	<%= @font.copyright.html_safe %>
+</div>
+
+<%= link_to 'Back', root_path, class: "btn btn-default" %>

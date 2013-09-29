@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>오픈폰트</title>
+	<%= stylesheet_link_tag    "application", media: "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+
+	<!--[if lt IE 9]>
+		<script src="/assets/js/html5shiv.js"></script>
+		<script src="/assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<ul class="nav nav-pills pull-right">
+				<li class="active"><a href="/">폰트</a></li>
+			</ul>
+			<h3 class="text-muted"><a href="/">오픈폰트</a></h3>
+		</div>
+
+		<%= yield %>
+
+		<div class="footer">
+			<p>&copy; 오픈폰트 <%= Date.today.year %></p>
+		</div>
+	</div> <!-- /container -->
+</body>
+</html>
