@@ -72,4 +72,12 @@ class FontTypesController < ApplicationController
     def font_type_params
       params.require(:font_type).permit(:name)
     end
+
+  protected
+    def authenticate
+      authenticate_or_request_with_http_basic('Administration') do |username, password|
+        md5_of_password = Digest::MD5.hexdigest(password)
+        username == 'sunki' && md5_of_password == '67202ef37a8e9657c7d05db96c85c3d1'
+      end
+    end
 end

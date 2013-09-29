@@ -71,4 +71,12 @@ class RelatedSitesController < ApplicationController
     def related_site_params
       params.require(:related_site).permit(:name, :description)
     end
+
+  protected
+    def authenticate
+      authenticate_or_request_with_http_basic('Administration') do |username, password|
+        md5_of_password = Digest::MD5.hexdigest(password)
+        username == 'sunki' && md5_of_password == '67202ef37a8e9657c7d05db96c85c3d1'
+      end
+    end
 end
