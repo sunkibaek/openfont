@@ -23,7 +23,7 @@
   </select>
 </div>
 
-<table class="table top_margin">
+<table class="table top_margin_80">
   <thead>
     <tr>
       <th>폰트</th>
@@ -48,7 +48,7 @@
         <td><%= font.weight %></td>
       </tr>
       <tr>
-        <td colspan="9" style="border-top:none;"><span style="font-family: '<%= font.family_name %>', <%= font.font_type.name %>;font-style:<%= font.style %>;font-weight:<%= font.weight %>;font-size:{{example.size}};">{{example.text || "오픈폰트는 웹에서 자유롭게 사용할 수 있는 우리말 폰트를 제공합니다"}}</span></td>
+        <td colspan="9" class="no_top_border"><span style="font-family: '<%= font.family_name %>', <%= font.font_type.name %>;font-style:<%= font.style %>;font-weight:<%= font.weight %>;font-size:{{example.size}};">{{example.text || "오픈폰트는 웹에서 자유롭게 사용할 수 있는 우리말 폰트를 제공합니다"}}</span></td>
       </tr>
     <% end %>
   </tbody>

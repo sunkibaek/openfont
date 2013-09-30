@@ -94,6 +94,18 @@ body {
   }
 }
 
-.top_margin {
+.top_margin_80 {
   margin-top: 80px;
+}
+
+.top_margin_30 {
+  margin-top: 30px;
+}
+
+.no_top_border {
+  border-top: none;
+}
+
+.left_border {
+  border-left: 1px solid #ddd;
 }

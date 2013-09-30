@@ -1,4 +1,7 @@
 Openfont::Application.routes.draw do
+  get 'compatibility' => 'static_pages#compatibility'
+
+  get "static_pages/compatibility"
   resources :related_sites
 
   resources :fonts do
