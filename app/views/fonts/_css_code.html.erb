@@ -1,4 +1,4 @@
-@font-face {
+<!-- @font-face {
   font-family: '<%= font.family_name %>';
   font-style: <%= font.style %>;
   font-weight: <%= font.weight %>;
@@ -9,4 +9,15 @@
        url('http://openfont.kr/fonts/<%= font.name %>.woff') format('woff'),
        url('http://openfont.kr/fonts/<%= font.name %>.svg#<%= font.family_name.gsub(' ', '') %>') format('svg'),
        url('http://openfont.kr/fonts/<%= font.name %>.ttf') format('truetype');
-}
+} -->
+@font-face {
+  font-family: '<%= font.family_name %>';
+  font-style: <%= font.style %>;
+  font-weight: <%= font.weight %>;
+  src: url('http://openfont.kr/fonts/<%= font.name %>.eot');
+  src: local('☺'),
+       url('https://sites.google.com/site/openfontresource/fonts/<%= font.name %>.eot?#iefix') format('embedded-opentype'),
+       url('https://sites.google.com/site/openfontresource/fonts/<%= font.name %>.woff2') format('woff2'),
+       url('https://sites.google.com/site/openfontresource/fonts/<%= font.name %>.woff') format('woff'),
+       url('https://sites.google.com/site/openfontresource/fonts/<%= font.name %>.svg#<%= font.family_name.gsub(' ', '') %>') format('svg'),
+       url('https://sites.google.com/site/openfontresource/fonts/<%= font.name %>.ttf') format('truetype');
