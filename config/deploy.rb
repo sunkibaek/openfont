@@ -1,5 +1,3 @@
-require "bundler/capistrano"
-
 server "openfont.kr", :web, :app, :db, primary: true
 
 set :application, "openfont"
@@ -9,7 +7,7 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, "git@github.com:sunkibaek/#{application}.git"
+set :repo_url, "git@github.com:sunkibaek/#{application}.git"
 set :branch, "master"
 
 default_run_options[:pty] = true
